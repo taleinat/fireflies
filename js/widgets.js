@@ -92,10 +92,10 @@ Widgets.toggle = function(config){
 	self.onChangeValue = function(newValue){
 		self.value = newValue;
 		if(self.value){ // on
-			toggle_switch.style.left = "0px";
+			toggle_switch.style.left = config.rtl ? "-80px" : "0px";
 			toggle.style.background = config["background-on"];
 		}else{ // off
-			toggle_switch.style.left = "-80px";
+			toggle_switch.style.left = config.rtl ? "0px" : "-80px";
 			toggle.style.background = config["background"];
 		}
 	}
@@ -243,6 +243,7 @@ Widgets.slider = function(config){
 
 		// Convert to value
 		x = x/sliderWidth; // 0 to 1
+	  	if (config.rtl) x = 1-x;
 		x = min + x*(max-min); // min to max
 		x = Math.round(x/step)*step; // round to nearest step
 
@@ -259,6 +260,7 @@ Widgets.slider = function(config){
 		var knobWidth = slider_knob.getBoundingClientRect().width;
 		var sliderWidth = self.dom.getBoundingClientRect().width - knobWidth;
 		var x = (value-min)/(max-min); // 0 to 1
+	  	if (config.rtl) x = 1-x;
 		var left = x*sliderWidth;
 		slider_knob.style.left = left;
 

@@ -1,12 +1,23 @@
 @font-face{
-	font-family: 'Goudy';
+	font-family: 'Pfennig';
 	font-style: normal;
-	src: url('GoudyStM-webfont.ttf') format('truetype');
+	src: url('Pfennig.ttf') format('truetype');
 }
 @font-face {
-	font-family: 'Goudy';
+	font-family: 'Pfennig';
 	font-style: italic;
-	src: url('GoudyStM-Italic-webfont.ttf') format('truetype');
+	src: url('PfennigItalic.ttf') format('truetype');
+}
+@font-face {
+	font-family: 'Pfennig';
+	font-weight: bold;
+	src: url('PfennigBold.ttf') format('truetype');
+}
+@font-face {
+	font-family: 'Pfennig';
+	font-weight: bold;
+	font-style: italic;
+	src: url('PfennigBoldItalic.ttf') format('truetype');
 }
 
 body{
@@ -22,9 +33,9 @@ body{
 
 	/* Positioning */
 	position: absolute;
-	top:0; left:0;
+	top:0; right:0;
 	width: 350px;
-	margin-left: 65px;
+	margin-right: 65px;
 	padding-left: 15px;
 	padding-right: 15px;
 	padding-top: 50px;
@@ -34,7 +45,7 @@ body{
 	background: rgba(0,0,0,0.5);
 
 	/* Font */
-	font-family: 'Goudy';
+	font-family: 'Pfennig';
 	font-size: 20px;
 	line-height: 1.5em;
 	color: #fff;
